@@ -1,7 +1,6 @@
-
-
-
 import 'package:flutter/material.dart';
+import 'package:loginpage/forgotpass.dart';
+import 'package:loginpage/signup.dart';
 
 
 void main(){
@@ -101,7 +100,7 @@ focusedBorder:OutlineInputBorder(
 borderSide: const BorderSide(color: Colors. deepPurple, width: 2.0),
 borderRadius: BorderRadius. circular(25.0),
 ),
-      labelText: "enter password"
+      labelText: "Enter password"
     
     ),
     
@@ -111,7 +110,12 @@ borderRadius: BorderRadius. circular(25.0),
 
 ),
 FlatButton(
-onPressed: (){},
+onPressed: (){
+Navigator.push(context, 
+                              MaterialPageRoute(builder: (context)=>forgotpass()));
+                              
+
+},
                     textColor: Colors.deepPurple,
                     child: Text('Forgot Password'),
 
@@ -130,7 +134,13 @@ ElevatedButton(onPressed:(){}, child: Text("login")),
                               'Sign up',
                               style: TextStyle(fontSize: 20),
                             ),
-                            onPressed: (){},
+                            onPressed: (){
+                              Navigator.push(context, 
+                              MaterialPageRoute(builder: (context)=>signupPage()));
+                              
+
+
+                            },
                           )
                         ],
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -158,10 +168,4 @@ ElevatedButton(onPressed:(){}, child: Text("login")),
 ),
 
 );
-
-
-
-
-  }
-  
-}
+}}
